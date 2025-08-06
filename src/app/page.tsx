@@ -9,7 +9,9 @@ import { motion } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
 
 export default function Chat() {
-    const { messages, input, handleInputChange, handleSubmit } = useChat();
+    const { messages, input, handleInputChange, handleSubmit } = useChat({
+        id: 'chat',
+    });
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
